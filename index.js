@@ -9,6 +9,12 @@ const writeFile = util.promisify(fs.writeFile);
 const readFile = util.promisify(fs.readFile);
 const required = { required: true };
 
+Mustache.escape = function (value)
+{
+    return value;
+};
+
+
 /**
  * Status marks the deployment status. Only activates if token is set as an
  * input to the job.
